@@ -1,0 +1,63 @@
+:root {
+  --light-gray: #808080;
+  --blue: #236AB9;
+  --light-orange: #FC7307;
+  --light-blue: #D4E4F7;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#calculator {
+  width: 30%;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 3px solid;
+  background-color: var(--light-gray);
+  gap: 2px;
+}
+
+#display {
+  height: 4vh;
+  grid-row: 1 / 2;
+  grid-column: 1 / 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  font-size: 4vh;
+}
+
+button {
+  border: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#clear, #negative, #percentage {
+  background-color: var(--blue);
+}
+
+#divide, #multiply, #subtract, #add {
+  background-color: var(--light-orange);
+}
+
+#seven, #eight, #nine, #four, #five, #six, #one, #two, #three, #zero, #decimal, #equals {
+  background-color: var(--light-blue);
+}
+
+#equals {
+  grid-column: 3 / 5;
+}
